@@ -11,14 +11,7 @@ const payload = {
   iss: GITHUB_APP_ID,
 };
 
-var private_key;
-if (core == null) {
-  // usefull for testing offline
-  private_key = core.getInput("private_key");
-} else {
-  private_key = process.env.PRIVATE_KEY;
-}
-
+const private_key = core.getInput("private_key");
 if (private_key == null || private_key == "") {
   throw new Error("No private key provided");
 }
