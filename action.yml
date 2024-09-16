@@ -1,0 +1,19 @@
+name: "Get GitHub Apps user Access Token"
+description: "Get GitHub Apps user Access Token"
+inputs:
+  app_id:
+    description: "The GitHub Apps app id"
+    required: true
+  installation_id:
+    description: "The GitHub Apps installation id"
+    required: true
+  private_key:
+    description: "The GitHub Apps user private key"
+    required: true
+
+outputs:
+  token:
+    description: "The token for the GitHub apps user"
+runs:
+  using: "node20"
+  main: "index.js"
